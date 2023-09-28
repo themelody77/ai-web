@@ -11,4 +11,5 @@ def index():
 def return_summary():
     summary_length = request.form['size']
     rawtxt = request.form['rawtext']
-    return render_template("summary.html",summary=rawtxt,len=summary_length)
+    summary = summarizer(rawtxt)
+    return render_template("summary.html",summary=summary,len=summary_length)
