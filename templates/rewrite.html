@@ -23,7 +23,10 @@
         <form id="raw-text-form" action="/getSummary" method="post">
             <textarea name="rawtext" id="rawtext" placeholder="Enter your lengthy answer from your sources. We will make it short for you :)"></textarea>
             <input type="number" name="size" id="size" placeholder="Enter the marks of the question">
-            <button id="submit" type="submit">Rewrite</button>
+            <div id="submit-btns">
+                <button value="nlp" name="sumtype" class="submit" type="submit">Rewrite</button>
+                <button value="GPT" type="submit" id="GPT-submit" class="submit" name="sumtype">Rewrite</button>
+            </div>
         </form>
         <div id="summary-div">
             <h5>{{summary}}</h5>

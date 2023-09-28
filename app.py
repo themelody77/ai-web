@@ -15,6 +15,10 @@ def predictionbot():
 def return_summary():
     summary_length = request.form['size']
     rawtxt = request.form['rawtext']
-    summary = summarizer(rawtxt,summary_length)
-    print(summary)
-    return render_template("rewrite.html",summary=summary)
+    action = request.form['sumtype']
+    if action == "nlp":
+        summary = summarizer(rawtxt,summary_length)
+        print(summary)
+        return render_template("rewrite.html",summary=summary)
+    elif action == "GPT":
+        return "Model still under build. We encourage your patience"
