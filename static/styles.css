@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: rgb(17,24,49);
+}
+#header{
+    background-color: rgb(3,7,18);
+    width: 100dvw;
+    height: fit-content;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: space-between;
+}
+#logo{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin: 2%;
+}
+.nav-link{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+#nav-links{
+    padding: 2%;
+    width: 35dvw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#index-body{
+    position: absolute;
+    width: 80dvw;
+    height: 80dvh;
+    top: 0;bottom: 0;left: 0;right: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+}
+#index-body-disc{
+    color: white;
+    width: 45dvw;
+}
+#ai-pic{
+    width: 20dvw;
+    mix-blend-mode: lighten;
+    border-radius: 100%;
+    animation: oscillate 2s infinite;
+}
+#chatbot{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 1%;
+}
+#chat-bot{
+    width: 100px;
+    transform: scale(0.8);
+}
+#footer{
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;right: 0;
+    margin: 1% auto;
+    width: fit-content;
+    height: fit-content;
+    opacity: 0.5;
+    font-size: 0.75em;
+}
+@keyframes oscillate {
+    0%,100%{
+        transform: translateY(0);
+    }
+    55%{
+        transform: translateY(5px);
+    }
+    90%{
+        transform: translateY(-5px);
+    }
+}
