@@ -5,7 +5,7 @@ from heapq import nlargest
 rawtext = """
 hello world
 """
-def summarizer(text=rawtext):
+def summarizer(text=rawtext,sentence_length=3):
     stopwords = list(STOP_WORDS)
     nlp = spacy.load("en_core_web_sm")
     doc = nlp(text)
@@ -31,7 +31,13 @@ def summarizer(text=rawtext):
                     sentence_score[sent] += word_freq[word.text]
                 else:
                     sentence_score[sent] = word_freq[word.text]
-    sentence_length = int(len(sentences)*0.5)
+    sentence_length = int(sentence_length)
+    if 0<=sentence_length<4:
+        sentence_length = int(len(sentences)*0.3)
+    elif 4<=sentence_length<8:
+        sentence_length = int(len(sentences)*0.5)
+    else:
+        sentence_length = int(len(sentences)*0.99)
     summary = nlargest(sentence_length,sentence_score,key=sentence_score.get)
     fsummary = [word.text for word in summary]
     summary = ' '.join(fsummary)

@@ -1,5 +1,36 @@
-<form action="/getSummary" method="post">
-    <textarea name="rawtext" id="rawtext"></textarea>
-    <input type="number" name="size" id="size">
-    <button id="submit" type="submit">Rewrite</button>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Summarisation</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header id="header">
+        <h4 id="logo">Logo name</h4>
+        <div id="nav-links">
+            <a href="/" class="nav-link">Home</a>
+            <a href="/ansBot" class="nav-link">AnsBot</a>
+            <a class="nav-link">Bot2</a>
+            <a class="nav-link">Bot3</a>
+        </div>
+    </header>
+    <div id="chatbot">
+        <img src="https://img.icons8.com/3d-fluency/94/chatbot.png" alt="chatbot" id="chat-bot"/>
+    </div>
+    <div id="prediction-frame">
+        <form id="raw-text-form" action="/getSummary" method="post">
+            <textarea name="rawtext" id="rawtext" placeholder="Enter your lengthy answer from your sources. We will make it short for you :)"></textarea>
+            <input type="number" name="size" id="size" placeholder="Enter the marks of the question">
+            <button id="submit" type="submit">Rewrite</button>
+        </form>
+        <div id="summary-div">
+            <h6>{{summary}}</h6>
+        </div>
+    </div>
+    <footer id="footer">
+        Copyright © 2022 - 2023
+    </footer>
+</body>
+</html>

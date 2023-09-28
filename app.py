@@ -7,9 +7,14 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
-@app.route("/getSummary",methods=["POST"])
+@app.route("/ansBot")
+def predictionbot():
+    return render_template("rewrite.html",summary = "Rewritten Text")
+
+@app.route("/getSummary",methods=["GET","POST"])
 def return_summary():
     summary_length = request.form['size']
     rawtxt = request.form['rawtext']
-    summary = summarizer(rawtxt)
-    return render_template("summary.html",summary=summary,len=summary_length)
+    summary = summarizer(rawtxt,summary_length)
+    print(summary)
+    return render_template("rewrite.html",summary=summary)
