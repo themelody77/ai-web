@@ -41,4 +41,5 @@ def summarizer(text=rawtext,sentence_length=3):
     summary = nlargest(sentence_length,sentence_score,key=sentence_score.get)
     fsummary = [word.text for word in summary]
     summary = ' '.join(fsummary)
+    print(summary)
     return summary

@@ -131,6 +131,7 @@ a{
     padding: 2%;
     border-radius: 1rem;
     background-color: #f6d334;
+    cursor: pointer;
 }
 #summary-div{
     background-color: rgb(3,7,18);
@@ -140,4 +141,7 @@ a{
     border: thin solid #808080;
     color: #c0c0c0;
     padding: 2%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    box-shadow: inset 2px 2px 4px #000;
 }
