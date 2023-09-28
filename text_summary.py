@@ -2,7 +2,10 @@ import spacy
 from spacy.lang.en.stop_words import STOP_WORDS
 from string import punctuation
 from heapq import nlargest
-def summarizer(text="hi"):
+rawtext = """
+hello world
+"""
+def summarizer(text=rawtext):
     stopwords = list(STOP_WORDS)
     nlp = spacy.load("en_core_web_sm")
     doc = nlp(text)
@@ -32,4 +35,4 @@ def summarizer(text="hi"):
     summary = nlargest(sentence_length,sentence_score,key=sentence_score.get)
     fsummary = [word.text for word in summary]
     summary = ' '.join(fsummary)
-summarizer()
+    return summary
