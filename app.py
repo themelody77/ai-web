@@ -7,5 +7,8 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
-if __name__ == "__main__":
-    app.run(host='https://sathvik-ai-web.onrender.com', port=5000)
+@app.route("/getSummary",methods=["POST"])
+def return_summary():
+    summary_length = request.form['size']
+    rawtxt = request.form['rawtext']
+    return render_template("summary.html",summary=rawtxt,len=summary_length)
