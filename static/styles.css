@@ -172,3 +172,36 @@ a{
     justify-content: space-around;
     width: 100%;
 }
+.circle{
+    width: 1dvw;
+    height: 1dvw;
+    border-radius: 100%;
+    margin-right: 1%;
+}
+#legend{
+    position: absolute;
+    bottom: 4dvw;
+    left: 0;right: 0;
+    margin: 0 auto;
+    width: fit-content;
+    height: fit-content;
+    color: #fff;
+    font-size: 0.75em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.legend-child{
+    display: flex;
+    width: 30dvw;
+    align-items: center;
+    justify-content: center;
+}
+#extract{
+    background-color: #f6d334;
+}
+#abstract{
+    background-color: #86dc3d;
+}

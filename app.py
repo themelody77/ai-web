@@ -1,6 +1,6 @@
 from flask import request, Flask, render_template
 from text_summary import summarizer
-
+from abstract_summary import getAbstractSummary
 app = Flask(__name__)
 
 @app.route("/")
@@ -20,5 +20,7 @@ def return_summary():
         summary = summarizer(rawtxt,summary_length)
         print(summary)
         return render_template("rewrite.html",summary=summary)
-    elif action == "GPT":
-        return "Model still under build. We encourage your patience"
+    elif action == "abstract":
+        summary = getAbstractSummary(rawtxt,summary_length)
+        print(summary)
+        return render_template("rewrite.html",summary=summary)
