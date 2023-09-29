@@ -20,11 +20,12 @@ body{
     left: 0;
     align-items: center;
     justify-content: space-between;
+    border-bottom: thin solid #c0c0c0;
 }
 #logo{
     color: white;
     font-family: 'Poppins', sans-serif;
-    margin: 2%;
+    margin: 0 2%;
 }
 .nav-link{
     color: white;
@@ -55,6 +56,20 @@ a{
 #index-body-disc{
     color: white;
     width: 45dvw;
+    display: flex;
+    flex-direction: column;
+}
+#index-body-disc-head{
+    font-size: 2em;
+}
+#objectives{
+    height: 15dvh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.objective-points{
+    display: none;
 }
 #ai-pic{
     width: 20dvw;
@@ -66,11 +81,11 @@ a{
     position: absolute;
     bottom: 0;
     left: 0;
-    margin: 1%;
 }
 #chat-bot{
-    width: 100px;
-    transform: scale(0.8);
+    width: 60px;
+    cursor: pointer;
+    margin: 4%;
 }
 #footer{
     color: white;
@@ -86,12 +101,15 @@ a{
 @keyframes oscillate {
     0%,100%{
         transform: translateY(0);
+        box-shadow: 1px 1px 16px #fff;
     }
     55%{
         transform: translateY(5px);
+        box-shadow: 2px 2px 32px #fff;
     }
     90%{
         transform: translateY(-5px);
+        box-shadow: 2px 2px 32px #fff;
     }
 }
 
