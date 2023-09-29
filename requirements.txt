@@ -7,4 +7,5 @@ gunicorn>=20.1.0,<21.0.0
 summarizer==0.0.7
 transformers==4.8.2
 google-generativeai==0.2.0
+tokenizers==0.10.3
 https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.6.0/en_core_web_sm-3.6.0.tar.gz#egg=en_core_web_sm
