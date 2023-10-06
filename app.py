@@ -6,15 +6,15 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return render_template("index.html",bid=os.environ.get["BOT_ID"])
+    return render_template("index.html",bid=os.environ.get("BOT_ID"))
 
 @app.route("/ansBot")
 def predictionbot():
-    return render_template("rewrite.html",summary = "Rewritten Text",bid=os.environ.get["BOT_ID"])
+    return render_template("rewrite.html",summary = "Rewritten Text",bid=os.environ.get("BOT_ID"))
 
 @app.route("/satBot")
 def satBot():
-    return render_template("chatbot.html",bid=os.environ.get["BOT_ID"])
+    return render_template("chatbot.html",bid=os.environ.get("BOT_ID"))
 
 @app.route("/getSummary",methods=["GET","POST"])
 def return_summary():
