@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sathvik AITT</title>
     <link rel="stylesheet" href="/static/styles.css">
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
 </head>
 <body>
     <header id="header">
@@ -13,16 +14,16 @@
             <a href="/" class="nav-link">Home</a>
             <a href="/ansBot" class="nav-link">SummarEase</a>
             <a class="nav-link">ExamWiz</a>
-            <a href="/satBot" class="nav-link">SatBot</a>
         </div>
     </header>
-    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-    <df-messenger
-    intent="WELCOME"
-    chat-title="sathvik-ai-chatbot"
-    agent-id={bid}
-    language-code="en"
-    ></df-messenger>
+    <div id="chat-cont">
+        <df-messenger chat-title="SatBot" chat-icon="/static/message.svg"
+        intent="WELCOME"
+        chat-title="sathvik-ai-chatbot"
+        agent-id="563386da-64a0-49ef-84f1-75226b98180b"
+        language-code="en"
+        ></df-messenger>
+    </div>
     <div id="prediction-frame">
         <form id="raw-text-form" action="/getSummary" method="post">
             <textarea required name="rawtext" id="rawtext" placeholder="Enter your lengthy answer from your sources. We will make it short for you :)"></textarea>

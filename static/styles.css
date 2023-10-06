@@ -205,3 +205,17 @@ a{
 #abstract{
     background-color: #86dc3d;
 }
+df-messenger{
+    --df-messenger-bot-message : #f6d334;
+    --df-messenger-chat-background-color : #000;
+    --df-messenger-input-box-color : rgb(17,24,49);
+    --df-messenger-font-color : #000;
+    --df-messenger-input-font-color	: #fff;
+    --df-messenger-send-icon : #fff;
+    --df-messenger-minimized-chat-close-icon-color : #000;
+}
+#chat-cont{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}

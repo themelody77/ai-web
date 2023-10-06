@@ -12,9 +12,6 @@ def index():
 def predictionbot():
     return render_template("rewrite.html",summary = "Rewritten Text",bid="563386da-64a0-49ef-84f1-75226b98180b")
 
-@app.route("/satBot")
-def satBot():
-    return render_template("chatbot.html",bid="563386da-64a0-49ef-84f1-75226b98180b")
 
 @app.route("/getSummary",methods=["GET","POST"])
 def return_summary():
