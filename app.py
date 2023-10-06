@@ -1,15 +1,20 @@
 from flask import request, Flask, render_template
 from text_summary import summarizer
 from abstract_summary import getAbstractSummary
+import os
 app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return render_template("index.html",bid=os.environ.get["BOT_ID"])
 
 @app.route("/ansBot")
 def predictionbot():
-    return render_template("rewrite.html",summary = "Rewritten Text")
+    return render_template("rewrite.html",summary = "Rewritten Text",bid=os.environ.get["BOT_ID"])
+
+@app.route("/satBot")
+def satBot():
+    return render_template("chatbot.html",bid=os.environ.get["BOT_ID"])
 
 @app.route("/getSummary",methods=["GET","POST"])
 def return_summary():

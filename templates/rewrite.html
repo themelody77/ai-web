@@ -13,12 +13,16 @@
             <a href="/" class="nav-link">Home</a>
             <a href="/ansBot" class="nav-link">SummarEase</a>
             <a class="nav-link">ExamWiz</a>
-            <a class="nav-link">SatBot</a>
+            <a href="/satBot" class="nav-link">SatBot</a>
         </div>
     </header>
-    <div id="chatbot">
-        <img src="/static/message.svg" alt="chatbot" id="chat-bot"/>
-    </div>
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <df-messenger
+    intent="WELCOME"
+    chat-title="sathvik-ai-chatbot"
+    agent-id={bid}
+    language-code="en"
+    ></df-messenger>
     <div id="prediction-frame">
         <form id="raw-text-form" action="/getSummary" method="post">
             <textarea required name="rawtext" id="rawtext" placeholder="Enter your lengthy answer from your sources. We will make it short for you :)"></textarea>
